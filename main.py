@@ -9,8 +9,11 @@ import csv
 import sys
 import sqlite3
 from sqlite3 import Error
+import currentEarnings
+import ImplementingDictionaries
 import week4Assignment
 import candlestickGraph
+
 import graph
 
 
@@ -67,7 +70,7 @@ def display_portfolio(self):
 def create_connection():
     connection = None
     try:
-        connection = sqlite3.connect('portfolio.db')
+        connection = sqlite3.connect('..\Output\portfolio.db')
     except Error as e:
         print(e)
     return connection    
